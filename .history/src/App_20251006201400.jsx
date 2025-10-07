@@ -42,7 +42,7 @@ const TASKS = [
 function App() {
   return(
     <main style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
-      <Title text="Todo List" />
+      <Title title="Todo List" />
       <button 
         style={{ marginBottom: 10}}
         onClick={() => {}}

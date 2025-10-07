@@ -1,4 +1,5 @@
 import './App.css'
+import { useState, useEffect } from 'react';
 
 function Item({ title, description, deadline }) {
   return(
@@ -40,12 +41,19 @@ const TASKS = [
 ]
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+  
+  useEffect(() => {
+    document.body.style.backgroundColor = darkMode ? 'black' : 'white';
+    document.body.style.color = darkMode ? 'white' : 'black';
+  }, [darkMode]);
+
   return(
     <main style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
       <Title text="Todo List" />
       <button 
         style={{ marginBottom: 10}}
-        onClick={() => {}}
+        onClick={() => {setDarkMode(!darkMode)}}
       >
         Dark Mode
       </button>

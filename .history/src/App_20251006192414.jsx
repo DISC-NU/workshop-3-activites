@@ -2,7 +2,7 @@ import './App.css'
 
 function Item({ title, description, deadline }) {
   return(
-    <div style={{ border: '1px solid black' }}>
+    <div>
       <h4>{title}</h4>
       <p>{description}</p>
       <span>{deadline}</span>
@@ -14,17 +14,27 @@ function App() {
   return(
     <main style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
       <h1>TODO LIST</h1>
-      <button 
-        style={{ marginBottom: 10}}
-        onClick={() => {}}
-      >
-        Dark Mode
-      </button>
       <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: 5, backgroundColor: 'gray' }}>
         <Item title='Laundry' description='cool desc' deadline='tomorrow' />
         <Item title='cool' description='cool desc' deadline='tomorrow' />
         <Item title='awesome' description='cool desc' deadline='tomorrow' />
         <Item title='this is cool' description='cool desc' deadline='tomorrow' />
+
+        <div className='task'>
+          <h4>Washing laundry</h4>
+          <p>Wash</p>
+          <span>tomorrow</span>
+        </div>
+        <div className='task'>
+          <h4>Washing laundry</h4>
+          <p>Wash</p>
+          <span>tomorrow</span>
+        </div>
+        <div className='task'>
+          <h4>Washing laundry</h4>
+          <p>Wash</p>
+          <span>tomorrow</span>
+        </div>
       </div>
     </main>
   );

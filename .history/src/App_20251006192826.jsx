@@ -14,12 +14,7 @@ function App() {
   return(
     <main style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
       <h1>TODO LIST</h1>
-      <button 
-        style={{ marginBottom: 10}}
-        onClick={() => {}}
-      >
-        Dark Mode
-      </button>
+      <button>Dark Mode</button>
       <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: 5, backgroundColor: 'gray' }}>
         <Item title='Laundry' description='cool desc' deadline='tomorrow' />
         <Item title='cool' description='cool desc' deadline='tomorrow' />

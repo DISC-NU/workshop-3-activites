@@ -10,11 +10,28 @@ function Item({ title, description, deadline }) {
   );
 }
 
-function Title({ title }) {
-  return (
-    <h1>{title}</h1>
-  )
-}
+const TASKS = [
+  {
+    title: 'Laundry',
+    description: 'something', 
+    deadline: 'tomorrow',
+  },
+  {
+    title: 'Laundry',
+    description: 'something', 
+    deadline: 'tomorrow',
+  },
+  {
+    title: 'Laundry',
+    description: 'something', 
+    deadline: 'tomorrow',
+  },
+  {
+    title: 'Laundry',
+    description: 'something', 
+    deadline: 'tomorrow',
+  }
+]
 
 function App() {
   return(
@@ -27,13 +44,12 @@ function App() {
         Dark Mode
       </button>
       <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: 5, backgroundColor: 'gray' }}>
-        <Item title='Laundry' description='cool desc' deadline='tomorrow' />
-        <Item title='cool' description='cool desc' deadline='tomorrow' />
-        <Item title='awesome' description='cool desc' deadline='tomorrow' />
-        <Item title='this is cool' description='cool desc' deadline='tomorrow' />
+        {TASKS.map((task) => {
+          return(<Item title={task.title} description={task.description} deadline={task.deadline} />);
+        })}
       </div>
     </main>
   );
 }
 
-export default App
+export default App;
